@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trang Giới Thiệu -Garu </title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/landingpage.css">
+    <link rel="icon" href="assets/images/Banner/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="assets/script.js"></script>
+</head>
+
+<body>
+<!-- Preloader-->
+    <div id="loading-screen">
+        <div class="ring"></div>
+    </div>
+<!--mouse effect-->
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    
+<!--Header with 3 div: logo, menu, others -->
+<header> 
+    <div class="logo">
+        <a href="home.html" class="logo"></a>
+        <img src="assets/images/Banner/logo.png" title="Nông sản sạch Garu" width="160px">
+    </div>
+
+    <nav class="menu">
+        <li><a href="home.html"> TRANG CHỦ</a></li>
+        <li><a href="landingpage.html"> GIỚI THIỆU</a></li>
+        <li><a href="products.html"> SẢN PHẨM</a>
+            <ul class="sub-menu">
+                <li><a href="products.html"><strong>Tất cả sản phẩm</strong></a></li>
+                <li><a href=""> Trái cây</a></li>
+                <li><a href=""> Rau củ</a></li>
+                <li><a href=""> Đồ uống </a></li>
+                <li><a href=""> Các loại Đậu</a></li>
+                <li><a href=""> Bún, gạo</a></li>
+                <li><a href=""> Thực phẩm hữu cơ</a></li>
+            </ul>
+        </li>
+        <li><a href="seed.html"> HẠT GIỐNG</a>
+            <ul class="sub-menu">
+                <li><a href="seed.html"><strong>Tất cả sản phẩm</strong></a></li>
+                <li><a href="">Hạt giống rau</a></li>
+                <li><a href="">Hạt giống củ quả</a></li>
+                <li><a href="">Hạt giống hoa cảnh</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html"> KIẾN THỨC</a>
+            <ul class="sub-menu">
+                <li><a href="blog.html"><strong>Tất cả tin</strong></a></li>
+                <li><a href="">Trồng trọt chăm bón</a></li>
+                <li><a href="">Cách nhân giống</a></li>
+                <li><a href="">Hướng dẫn trồng cây</a></li>
+                <li><a href="">Phân bón</a></li>
+                <li><a href="">Sức khỏe & an toàn</a></li>
+                <li><a href="">Món ngon mỗi ngày</a></li>
+            </ul>
+        </li>
+        <li><a href="contact.html"> LIÊN HỆ</a></li>
+    </nav>
+
+    <div class="others">
+        <button><a href="login.html"> Đăng nhập </a></button>
+        <button><a href="signup.html"> Đăng ký </a></button>
+        <div class="cart-container">
+            <div class="cart-icon" id="header-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <!--Popup giỏ hàng để lớp này khi hiện ra đè lên màn hình chính-->
+            <div class="cart-popup" id="cartPopup">
+                <h3>GIỎ HÀNG</h3>
+                <div class="cart-content">
+                    <i class="fas fa-shopping-cart cart-empty-icon"></i>
+                    <p>Hiện chưa có sản phẩm</p>
+                </div>
+                <div class="cart-footer">
+                <p><strong>Tổng tiền:</strong> <span>0₫</span></p>
+                <button class="btn-view-cart"><a href="">Xem giỏ hàng</a></button>
+                </div>
+            </div>
+        </div>
+     </div>
+</header>
+<!--Thanh dưới header: Time, Search, Hotline-->
+<div class="info-bar">
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button type="button" class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="hotline">
+        <p>Hotline: <strong>1800-1234</strong></p>
+    </div>
+</div>
+
+ <!-- Phần chính của trang -->
+ <div class="container-fluid d-flex justify-content-between ">
+    <!-- Text content -->
+    <div class="text-section">
+        <div class="h1 text-start">Khám phá <br><span style ="font-size:40px; color:#123e06; font-weight: 600;">hương vị đích thực</span></div>
+        <hr>
+        <br>
+        <h4 class="text-start" style="font-size: 18px;color:#123e06"> Tận hưởng cảm giác đắm mình vào đồ ăn thơm ngon 
+            từ những nguyên liệu tuơi sạch chất lượng cao cùng Garu ngay thôi nào!
+        </h4>
+        <br>
+        <br>
+        <br>
+        <button class="cta-button-contact">XEM THÊM <span> <img src="/assets/images/Khác/next.png"
+                    alt=""></span></button>
+
+        <br><br>
+       
+    </div>
+    <div class="right-content-contact d-flex justify-content-end">
+        <div class="image-section">
+            <div class="dashed-circle-1">
+            </div>
+            <img src="/assets/images/Khác/big-img.jfif" alt="Main Image" class="main-image">
+            
+        </div>
+    </div>
+</div>
+<section class="team-intro">
+    <div class="container5">
+        <div class="intro-wrapper">
+            <!-- Phần tiêu đề -->
+            <div class="intro-content">
+                <h2>Đội ngũ chuyên môn của chúng tôi</h2>
+                <h3>Hỗ trợ bạn với những trải nghiệm tốt nhất</h3>
+                <p class="intro-asc">
+                    Với đội ngũ chuyên môn giàu kinh nghiệm trong lĩnh vực ứng dụng nông nghiệp sạch, 
+                    chúng tôi cam kết mang đến cho khách hàng trải nghiệm dịch vụ chất lượng cao nhất. 
+                    Đội ngũ của chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bạn 24/7.
+                </p>
+            </div>
+            
+            <!-- Cột danh sách -->
+            <div class="expertise-list-wrapper">
+                <ul class="expertise-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Chuyên gia nghiên cứu nông nghiệp với hơn 10 năm kinh nghiệm
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Quy trình kiểm định chất lượng nghiêm ngặt
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Tư vấn kỹ thuật trồng trọt chuyên sâu
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Hỗ trợ khách hàng tận tâm
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Nhân viên tư vấn và bán hàng chuyên nghiệp
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Cột hình ảnh -->
+            <div class="intro-image">
+                <img src="assets/images/Trang intro/đội ngũ nhân sự.webp" alt="Expert Team Garu">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Phần Counter Stats -->
+<section class="counter-stats"></section>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 counter-item">
+                <div class="counter-number">
+                    <span class="counter" data-target="1300">10000</span>+
+                </div>
+                <h4>Khách hàng tin tưởng</h4>
+                <p>Phục vụ hơn 1300 khách hàng thân thiết</p>
+            </div>
+            <div class="col-lg-3 col-md-6 counter-item">
+                <div class="counter-number">
+                    <span class="counter" data-target="800">0</span>+
+                </div>
+                <h4>Sản phẩm hữu cơ</h4>
+                <p>Đa dạng sản phẩm nông sản sạch</p>
+            </div>
+            <div class="col-lg-3 col-md-6 counter-item">
+                <div class="counter-number">
+                    <span class="counter" data-target="100">0</span>%
+                </div>
+                <h4>An toàn vệ sinh</h4>
+                <p>Đạt chuẩn an toàn thực phẩm</p>
+            </div>
+            <div class="col-lg-3 col-md-6 counter-item">
+                <div class="counter-number">
+                    <span class="counter" data-target="120">0</span>+
+                </div>
+                <h4>Đối tác tin cậy</h4>
+                <p>Hợp tác với các nhà cung cấp uy tín trên toàn quốc</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section About -->
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2>Cam kết cung cấp sản phẩm<br> chất lượng cao</h2>
+                    <p>Chúng tôi tự hào là đơn vị tiên phong trong lĩnh vực cung cấp:</p>
+                    <ul>
+                        <li>Nông sản sạch được trồng theo tiêu chuẩn VietGAP</li>
+                        <li>Thực phẩm hữu cơ được chứng nhận của Bộ nông nghiệp<br> Hoa Kỳ</li>
+                        <li>Hạt giống chất lượng cao từ các nhà nghiên cứu uy tín</li>
+                        <li>Tư vấn kỹ thuật trồng trọt và bảo vệ môi trường</li>
+                    </ul>
+                    <a href="blog.html" class="cta-button3">Tìm hiểu thêm <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img src="assets/images/Trang intro/chứng nhận VietGAP.png" alt="Organic Farming 1">
+                        </div>
+                        <div class="image-item">
+                            <img src="assets/images/Trang intro/chứng nhận Bộ nông nghiệp Hoa Kì.jpg" alt="Organic Farming 2">
+                        </div>
+                        <div class="image-item">
+                            <img src="assets/images/Trang intro/nhà nghiên cứu hạt giống.webp" alt="Organic Farming 3">
+                        </div>
+                        <div class="image-item">
+                            <img src="assets/images/Trang intro/bảo vệ môi trường.jpg" alt="Organic Farming 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Hướng dẫn mua hàng-->
+<section class="buying-guide">
+    <div class="container">
+        <div class="guide-wrapper">
+            <!-- Phần hình ảnh minh họa -->
+            <div class="guide-image">
+                <img src="assets/images/Trang intro/hahaha.png" alt="Shopping Guide Image 1">
+                <img src="assets/images/Trang intro/hehehe.png" alt="Shopping Guide Image 2">
+            </div>
+
+            <!-- Phần hướng dẫn -->
+            <div class="guide-content">
+                <h2>Hướng Dẫn Mua Hàng Online</h2>
+                <p class="guide-desc">Quy trình đặt hàng đơn giản, nhanh chóng và tiện lợi</p>
+
+                <div class="guide-steps">
+                    <!-- Bước 1 -->
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-info">
+                            <h3>Đăng ký & Xác thực</h3>
+                            <p>Tạo tài khoản và xác thực để bắt đầu mua sắm. Hoặc mua hàng với tư cách khách, bạn chỉ cần đăng nhập số điện thoại.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bước 2 -->
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-info">
+                            <h3>Đặt hàng online</h3>
+                            <p>Chọn sản phẩm và thêm vào giỏ hàng của bạn. Sau đó, tiến hành lựa chọn phương thức thanh toán.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bước 3 -->
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-info">
+                            <h3>Nhận hàng</h3>
+                            <p>Giao hàng nhanh chóng trong vòng 24h.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông tin hỗ trợ -->
+                <div class="support-info">
+                    <div class="delivery">
+                        <h4>Giao hàng nhanh</h4>
+                        <p>Miễn phí giao hàng cho đơn từ <strong>500.000đ</strong></p>
+                    </div>
+                    <div class="hotline">
+                        <h4>Hỗ trợ 24/7</h4>
+                        <p class="phone">+84 123 456 789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Đăng kí nhận tin mới-->
+<hr>
+    <div class="newsletter-section">
+        <div class="text">
+            <h2>Đăng kí để nhận bài viết mới nhất</h2>
+            <p>*Nhập email để nhận những thông tin và ưu đãi mới nhất từ Garu.</p>
+        </div>
+       <div class="newsletter-form">
+           <input type="email" placeholder="Email của bạn là..." required>
+           <button type="submit">Đăng kí</button>
+       </div>
+    </div>
+<!-- Footer -->
+<footer>
+    <div class="container-1">
+        <div class="row">
+        <!-- Cột 1: Logo và Phương thức thanh toán -->
+            <div class="col-md-3">
+                <div class="logo">
+                    <img src="assets/images/Banner/logo.png" alt="Logo" width="150">
+                </div>
+                <p>Chúng tôi cung cấp các sản phẩm nông sản sạch chất lượng cao.</p>
+                <h5>Phương thức thanh toán:</h5>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-wallet"></i>
+                </div>
+            </div>
+          
+        <!-- Cột 2: Hỗ trợ -->
+            <div class="col-md-3">
+                <h5>Hỗ trợ</h5>
+                <ul>
+                    <li><a href="">Chính sách bảo hành</a></li>
+                    <li><a href="">Chính sách vận chuyển</a></li>
+                    <li><a href="">Chính sách bảo mật</a></li>
+                    <li><a href="">Chính sách đổi trả</a></li>
+                    <li><a href="">Tùy chọn thanh toán</a></li>
+                </ul>
+            </div>
+          
+        <!-- Cột 3: Thông tin liên hệ -->
+            <div class="col-md-3">
+                <h5>Thông tin liên hệ</h5>
+                <ul>
+                    <li><strong>Địa chỉ:</strong> 123 Đường ABC</li>
+                    <li><strong>Điện thoại:</strong> 0987654321</li>
+                    <li><strong>Email:</strong> info@garu.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+          
+            <!-- Cột 4: Cam kết khách hàng -->
+            <div class="col-md-3">
+                <h5>Cam kết khách hàng</h5>
+                <ul>
+                    <li>Giá ưu đãi nhất</li>
+                    <li>Sản phẩm chất lượng cao</li>
+                    <li>Truy xuất nguồn gốc rõ ràng</li>
+                    <li>Sản phẩm không đúng đền 100%</li>
+                </ul>
+            </div>
+          
+            <!-- Dòng dưới các cột -->
+            <div class="text-center mt-4">
+                <p>Website nông sản sạch Garu Việt Nam</p>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+</body>
+<script>
+    // Hết ring sau khi tải trang
+    window.onload = function () {
+        document.getElementById("loading-screen").style.display = "none";
+    };
+
+</script>
+<!--Hiện thị chuột-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/60eee2d4f6.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   const circle = document.getElementById('cursor-circle');
+const dot = document.getElementById('cursor-dot');
+
+let mouseX = 0;
+let mouseY = 0;
+let circleX = 0;
+let circleY = 0;
+
+// Kiểm tra sự tồn tại của các phần tử trong DOM
+if (circle && dot) {
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+
+        // Cập nhật vị trí của dot, điều chỉnh cho phù hợp với chuột
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`; // Điều chỉnh độ lệch của dot
+
+        // Cập nhật kích thước circle
+        circle.style.width = '35px';
+        circle.style.height = '35px';
+    });
+
+    function animate() {
+        // Cập nhật vị trí của circle với độ trễ
+        circleX += (mouseX - circleX) * 0.3;
+        circleY += (mouseY - circleY) * 0.3;
+
+        // Điều chỉnh vị trí của circle sao cho chính xác
+        circle.style.left = `${circleX}px`;
+        circle.style.top = `${circleY}px`;
+
+        // Yêu cầu một frame tiếp theo để tạo hiệu ứng mượt mà
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Khi chuột di chuyển ra ngoài, thu nhỏ circle và ẩn dot
+    document.addEventListener('mouseout', () => {
+        circle.style.width = '20px';
+        circle.style.height = '20px';
+        
+        // Ẩn dot khi chuột ra ngoài
+        dot.style.left = `-9999px`;
+        dot.style.top = `-9999px`; // Di chuyển dot ra ngoài màn hình
+    });
+}
+
+
+</script>
+
+<script>
+    // Ngày kếết thúc đếm ngược
+    const endDate = new Date("2024-12-28T23:59:59").getTime();
+
+    // Hàm cập nhật đếm ngược
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        // Tính toán ngày, giờ, phút và giây còn lại
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Hiển thị kết quả
+        document.getElementById("days").innerText = days.toString().padStart(2, '0');
+        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+        // Nếu hết thời gian, dừng đếm ngược
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "Đã hết thời gian!";
+        }
+    }
+
+    // Cập nhật đếm ngược mỗi giây
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Chạy ngay khi tải trang
+    updateCountdown();
+</script>
+<!--Sản phẩm nổi bật-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<script>
+// Get cart elements
+const cartIcon = document.getElementById('header-cart');
+const cartPopup = document.getElementById('cartPopup');
+
+// Toggle cart popup when clicking cart icon
+if (cartIcon && cartPopup) {
+    cartIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Toggle active class
+        cartPopup.classList.toggle('active');
+        
+        // If popup is active, ensure it's visible
+        if (cartPopup.classList.contains('active')) {
+            cartPopup.style.display = 'block';
+            // Add animation class
+            cartPopup.style.opacity = '1';
+            cartPopup.style.transform = 'translateY(0)';
+        } else {
+            // Hide popup
+            cartPopup.style.opacity = '0';
+            cartPopup.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                cartPopup.style.display = 'none';
+            }, 300); // Match transition duration from CSS
+        }
+    });
+
+    // Close cart popup when clicking outside
+    document.addEventListener('click', function(e) {
+        if (cartPopup.classList.contains('active') && 
+            !cartPopup.contains(e.target) && 
+            !cartIcon.contains(e.target)) {
+            // Hide popup
+            cartPopup.classList.remove('active');
+            cartPopup.style.opacity = '0';
+            cartPopup.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                cartPopup.style.display = 'none';
+            }, 300);
+        }
+    });
+}
+
+// Prevent popup from closing when clicking inside it
+cartPopup.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/60eee2d4f6.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
+        
+        const startCounting = (element) => {
+            const target = parseInt(element.getAttribute('data-target'));
+            let count = 0;
+            const duration = 500; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+
+            const updateCounter = () => {
+                count += increment;
+                if (count < target) {
+                    element.textContent = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        };
+
+        // Use Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounting(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe all counter elements
+        counters.forEach(counter => observer.observe(counter));
+    });
+    </script>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nông sản sạch Garu- Uy tín chất lượng </title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/home.css">
+    <link rel="icon" href="assets/images/Banner/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="assets/script.js"></script>
+    <script src="/assets/detail.js"></script>
+    <script src="/assets/home.js"></script>
+</head>
+
+<body>
+    <!-- Preloader-->
+    <div id="loading-screen">
+        <div class="ring"></div>
+    </div>
+    <!--mouse effect-->
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <!--Header with 3 div: logo, menu, others -->
+    <header>
+        <div class="logo">
+            <a href="home.html" class="logo"></a>
+            <img src="assets/images/Banner/logo.png" title="Nông sản sạch Garu" width="160px">
+        </div>
+
+        <nav class="menu">
+            <li><a href="home.html"> TRANG CHỦ</a></li>
+            <li><a href="landingpage.html"> GIỚI THIỆU</a></li>
+            <li><a href="products.html"> SẢN PHẨM</a>
+                <ul class="sub-menu">
+                    <li><a href="products.html"><strong>Tất cả sản phẩm</strong></a></li>
+                    <li><a href=""> Trái cây</a></li>
+                    <li><a href=""> Rau củ</a></li>
+                    <li><a href=""> Đồ uống </a></li>
+                    <li><a href=""> Các loại Đậu</a></li>
+                    <li><a href=""> Bún, gạo</a></li>
+                    <li><a href=""> Thực phẩm hữu cơ</a></li>
+                </ul>
+            </li>
+            <li><a href="seed.html"> HẠT GIỐNG</a>
+                <ul class="sub-menu">
+                    <li><a href="seed.html"><strong>Tất cả sản phẩm</strong></a></li>
+                    <li><a href="seed.html">Hạt giống rau</a></li>
+                    <li><a href="seed.html">Hạt giống củ quả</a></li>
+                    <li><a href="seed.html">Hạt giống hoa cảnh</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"> KIẾN THỨC</a>
+                <ul class="sub-menu">
+                    <li><a href="blog.html"><strong>Tất cả tin</strong></a></li>
+                    <li><a href="">Trồng trọt chăm bón</a></li>
+                    <li><a href="">Cách nhân giống</a></li>
+                    <li><a href="">Hướng dẫn trồng cây</a></li>
+                    <li><a href="">Phân bón</a></li>
+                    <li><a href="">Sức khỏe & an toàn</a></li>
+                    <li><a href="">Món ngon mỗi ngày</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html"> LIÊN HỆ</a></li>
+        </nav>
+
+        <div class="others">
+            <button><a href="login.html"> Đăng nhập </a></button>
+            <button><a href="signup.html"> Đăng ký </a></button>
+            <div class="cart-container">
+                <div class="cart-icon" id="header-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <!--Popup giỏ hàng để lớp này khi hiện ra đè lên màn hình chính-->
+                <div class="cart-popup" id="cartPopup">
+                    <h3>GIỎ HÀNG</h3>
+                    <div class="cart-content">
+                        <i class="fas fa-shopping-cart cart-empty-icon"></i>
+                        <p>Hiện chưa có sản phẩm</p>
+                    </div>
+                    <div class="cart-footer">
+                        <p><strong>Tổng tiền:</strong> <span>0₫</span></p>
+                        <button class="btn-view-cart"><a href="">Xem giỏ hàng</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Thanh dưới header: Time, Search, Hotline-->
+    <div class="info-bar">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <button type="button" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        <div class="hotline">
+            <p>Hotline: <strong>1800-1234</strong></p>
+        </div>
+    </div>
+
+    <!-- Phần chính của trang -->
+    <main>
+
+        <section id="home" class="home-section">
+            <div class="background-container">
+                <div class="hero-content">
+                    <h1 class="handwrite"> Nông sản sạch Garu </h1>
+                    <p class="typing-text"> Sale up to 40% toàn bộ sản phẩm</p>
+                    <a href="products" class="cta-button"> Khám phá ngay</a>
+                </div>
+            </div>
+        </section>
+        <!--Một phần nhỏ liên kết với trang giới thiệu-->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/images/Mock up.png" alt="About Image">
+                    </div>
+
+                    <div class="about-text">
+                        <h1>Giới thiệu về Garu</h1>
+                        <h3>Nông sản sạch hàng đầu Việt Nam</h3>
+                        <p>Dù là một thương hiệu mới vẫn chưa được biết đến nhiều trên thị trường nhưng chúng tôi tin
+                            những cố gắng cung cấp sản phẩm và dịch vụ tốt nhất mà chúng tôi đã và đang làm sẽ mang lại
+                            trải nghiệm tốt cho khách hàng và đối tác lâu dài.</p>
+                        <a href="landingpage.html" class="cta-button1">Tìm hiểu thêm <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Danh mục sản phẩm nổi bật-->
+        <div class="container2 my-4">
+            <!--Tiêu đề-->
+            <div class="promo-section">
+                <div class="promo-content text-center">
+                    <h2 class="text">Sản phẩm ưu đãi</h2>
+                    <p>Các sản phẩm nông sản sạch đang giảm giá</p>
+                    <div class="time-counter" id="countdown">
+                        <span id="days">00</span> Ngày
+                        <span id="hours">00</span> Giờ
+                        <span id="minutes">00</span> Phút
+                        <span id="seconds">00</span> Giây
+                    </div>
+                </div>
+                <div class="promo-image1">
+                    <img src="assets/images/Banner/image24.png" alt="ảnh hoa quả">
+                </div>
+
+            </div>
+            <!-- Các sản phẩm -->
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-7%</span>
+                        <a
+                            href="product-detail.html?id=1&name=Cốm làng Vòng&price=55800&oldPrice=60000&image=assets/images/cốm.png&sold=394">
+                            <img src="assets/images/cốm.png" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Cốm làng Vòng</h6>
+                            <p class="mb-1"><strong>55.800đ</strong> <del>60.000đ</del></p>
+                            <small>Đã bán 394</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="404.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(1, 'Cốm làng Vòng chính hiệu', '55.800đ', 'assets/images/cốm.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-8%</span>
+                        <a
+                            href="product-detail.html?id=2&name=Gia vị chuẩn Tây Bắc&price=118.680&oldPrice=129.000&assets/images/gia vị Việt.jpg&sold=291">
+                            <img src="assets/images/gia vị Việt.jpg" alt="Product Image" class="w-100"></a>
+                        <div class="p-3">
+                            <h6>Gia vị chuẩn Tây Bắc</h6>
+                            <p class="mb-1"><strong>118.680đ</strong> <del>129.000đ</del></p>
+                            <small>Đã bán 291</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="checkout.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(2, 'Gia vị chuẩn Tây Bắc', '118.680đ', 'assets/images/gia vị Việt.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-17%</span>
+                        <a
+                            href="product-detail.html?id=3&name=Thịt lợn sạch&price=215800&oldPrice=260000&image=assets/images/Thịt/thịt lợn 2.jpg&sold=839">
+                            <img src="assets/images/Thịt/thịt lợn 2.jpg" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Thịt lợn sạch</h6>
+                            <p class="mb-1"><strong>215.800đ</strong> <del>260.000đ</del></p>
+                            <small>Đã bán 839</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="link-mua-ngay.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(3, 'Thịt lợn sạch', '215.800đ', 'assets/images/Thịt/thịt lợn 2.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-17%</span>
+                        <a
+                            href="product-detail.html?id=4&name=Gạo ST25K dẻo thơm&price=111600&oldPrice=120000&image=assets/images/Gạo/Gạo.jpg&sold=100">
+                            <img src="assets/images/Gạo/Gạo.jpg" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Gạo ST25K dẻo thơm</h6>
+                            <p class="mb-1"><strong>111.600đ</strong> <del>120.000đ</del></p>
+                            <small>Đã bán 100</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="link-mua-ngay.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(4, 'Gạo ST25K dẻo thơm', '111.600đ', 'assets/images/Gạo/Gạo.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Các sản phẩm dòng 2-->
+            <div class="row g-4-1">
+                <!-- Product 1 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-6%</span>
+                        <a
+                            href="product-detail.html?id=5&name=Chè Thái Nguyên&price=50600&oldPrice=55000&image=assets/images/Rau củ/chè Thái Nguyên.jpg&sold=291">
+                            <img src="assets/images/Rau củ/chè Thái Nguyên.jpg" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Chè Thái Nguyên </h6>
+                            <p class="mb-1"><strong>50.600đ</strong> <del>55.000đ</del></p>
+                            <small>Đã bán 291</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="link-mua-ngay.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(5, 'Chè Thái Nguyên', '50.600đ', 'assets/images/Rau củ/chè Thái Nguyên.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-12%</span>
+                        <a
+                            href="product-detail.html?id=6&name=Mùi tàu&price=10560&oldPrice=12000&image=assets/images/Rau củ/mùi tàu 1.jpg&sold=273">
+                            <img src="assets/images/Rau củ/mùi tàu 1.jpg" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Mùi tàu </h6>
+                            <p class="mb-1"><strong>10.560đ</strong> <del>12.000đ</del></p>
+                            <small>Đã bán 273</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="link-mua-ngay.html" class="overlay-text">Mua Ngay</a>
+                            <button onclick="addToCart(6, 'Mùi tàu', '10.560đ', 'assets/images/Rau củ/mùi tàu 1.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-10%</span>
+                        <a
+                            href="product-detail.html?id=7&name=Dứa mật vàng&price=23000&oldPrice=26000&image=assets/images/Trái cây/dứa mật.jpg&sold=839">
+                            <img src="assets/images/Trái cây/dứa mật.jpg" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Dứa mật vàng</h6>
+                            <p class="mb-1"><strong>23.000đ</strong> <del>26.000đ</del></p>
+                            <small>Đã bán 839</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="link-mua-ngay.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(7, 'Dứa mật vàng', '23.000đ', 'assets/images/Trái cây/dứa mật.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-3">
+                    <div class="product-card position-relative">
+                        <span class="discount-badge">-16%</span>
+                        <a
+                            href="product-detail.html?id=8&name=Nước ép việt quất&price=29400&oldPrice=35000&image=assets/images/Đồ uống/đồ uống.jpg&sold=100">
+                            <img src="assets/images/Đồ uống/đồ uống.jpg" alt="Product Image" class="w-100">
+                        </a>
+                        <div class="p-3">
+                            <h6>Nước ép việt quất</h6>
+                            <p class="mb-1"><strong>29.400đ</strong> <del>35.000</del></p>
+                            <small>Đã bán 100</small>
+                        </div>
+                        <div class="overlay-buttons d-flex justify-content-around">
+                            <a href="link-mua-ngay.html" class="overlay-text">Mua Ngay</a>
+                            <button
+                                onclick="addToCart(8, 'Nước ép việt quất', '29.400đ', 'assets/images/Đồ uống/đồ uống.jpg')"
+                                class="overlay-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn">Xem tất cả</a>
+            </div>
+        </div>
+        <!--Thêm sản phẩm nổi bật Tết-->
+        <div class="container0 py-5">
+            <div class="text-center">
+                <!-- Tiêu đề chính -->
+                <h2>Giỏ Quà Tết Yêu Thương</h2>
+                <!-- Phụ đề -->
+                <p class="lead">Khám phá các giỏ quà Tết tuyệt vời dành cho người thân yêu của bạn!</p>
+            </div>
+            <!-- Thư viện ảnh -->
+            <div class="gift-gallery-wrapper">
+                <div class="row" id="gallery">
+                    <!-- Ảnh 1 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=9&name=Giỏ Quà Tết Doanh Nghiệp&price=1100000&oldPrice=1300000&image=assets/images/quà tết/quà tết 1.webp&sold=50">
+                                <img src="assets/images/quà tết/quà tết 1.webp" alt="Quà Tết 1"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Doanh Nghiệp</h5>
+                            <p class="gift-subtitle">Một lựa chọn tuyệt vời</p>
+                            <p class="gift-price">1.100.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(9, 'Giỏ Quà Tết Doanh Nghiệp', '1.100.000', 'assets/images/quà tết/quà tết 1.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 2 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=10&name=Giỏ Quà Tết Sắc Xuân&price=1600000&oldPrice=1800000&image=assets/images/quà tết/quà tết 2.webp&sold=45">
+                                <img src="assets/images/quà tết/quà tết 2.webp" alt="Quà Tết 2"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Sắc Xuân</h5>
+                            <p class="gift-subtitle">Sự lựa chọn hoàn hảo cho năm mới</p>
+                            <p class="gift-price">1.600.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(10, 'Giỏ Quà Tết Sắc Xuân', '1.600.000', 'assets/images/quà tết/quà tết 2.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 3 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=11&name=Giỏ Quà Tết Đại Phát&price=1400000&oldPrice=1600000&image=assets/images/quà tết/quà tết 3.webp&sold=38">
+                                <img src="assets/images/quà tết/quà tết 3.webp" alt="Quà Tết 3"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Đại Phát</h5>
+                            <p class="gift-subtitle">Món quà ý nghĩa</p>
+                            <p class="gift-price">1.400.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(11, 'Giỏ Quà Tết Đại Phát', '1.400.000', 'assets/images/quà tết/quà tết 3.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 4 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=12&name=Giỏ Quà Tết Bình An&price=1550000&oldPrice=1700000&image=assets/images/quà tết/quà tết 4.webp&sold=42">
+                                <img src="assets/images/quà tết/quà tết 4.webp" alt="Quà Tết 4"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Bình An</h5>
+                            <p class="gift-subtitle">Một món quà đặc biệt</p>
+                            <p class="gift-price">1.550.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(12, 'Giỏ Quà Tết Bình An', '1.550.000', 'assets/images/quà tết/quà tết 4.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 5 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=13&name=Giỏ Quà Tết An Lành&price=1250000&oldPrice=1400000&image=assets/images/quà tết/quà tết 5.webp&sold=35">
+                                <img src="assets/images/quà tết/quà tết 5.webp" alt="Quà Tết 5"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết An Lành</h5>
+                            <p class="gift-subtitle">Một món quà tròn tình</p>
+                            <p class="gift-price">1.250.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(13, 'Giỏ Quà Tết An Lành', '1.250.000', 'assets/images/quà tết/quà tết 5.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 6 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=14&name=Giỏ Quà Tết Tấn Phát&price=1550000&oldPrice=1700000&image=assets/images/quà tết/quà tết 6.jpg&sold=40">
+                                <img src="assets/images/quà tết/quà tết 6.jpg" alt="Quà Tết 6"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Tấn Phát</h5>
+                            <p class="gift-subtitle">Nâng niu tình người Việt</p>
+                            <p class="gift-price">1.550.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(14, 'Giỏ Quà Tết Tấn Phát', '1.550.000', 'assets/images/quà tết/quà tết 6.jpg')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 7 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=15&name=Giỏ Quà Tết Cao Cấp&price=1750000&oldPrice=1900000&image=assets/images/quà tết/quà tết 7.webp&sold=30">
+                                <img src="assets/images/quà tết/quà tết 7.webp" alt="Quà Tết 7"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Cao Cấp</h5>
+                            <p class="gift-subtitle">Một món quà đặc biệt</p>
+                            <p class="gift-price">1.750.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(15, 'Giỏ Quà Tết Cao Cấp', '1.750.000', 'assets/images/quà tết/quà tết 7.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ảnh 8 -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <div class="gift-card">
+                            <a
+                                href="product-detail.html?id=16&name=Giỏ Quà Tết Tri Ân&price=1050000&oldPrice=1200000&image=assets/images/quà tết/quà tết 8.webp&sold=33">
+                                <img src="assets/images/quà tết/quà tết 8.webp" alt="Quà Tết 8"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h5 class="gift-title">Giỏ Quà Tết Tri Ân</h5>
+                            <p class="gift-subtitle">Tri ân lòng thành kính </p>
+                            <p class="gift-price">1.050.000 VND</p>
+                            <!-- Lớp phủ -->
+                            <div class="overlay-buttons d-flex justify-content-around">
+                                <a href="#" class="overlay-text">Mua Ngay</a>
+                                <button
+                                    onclick="addToCart(16, 'Giỏ Quà Tết Tri Ân', '1.050.000', 'assets/images/quà tết/quà tết 8.webp')"
+                                    class="overlay-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Bài viết gần nhất-->
+        <section class="latest-news">
+            <h2 class="news-title">Tin đăng gần nhất</h2>
+            <div class="news-container">
+                <!-- Main News Item -->
+                <div class="main-news">
+                    <a href="blog.html" class="news-link">
+                        <div class="news-card large">
+                            <img src="assets/images/Blogs/healthy.jpg" alt="Main news image">
+                            <div class="news-content">
+                                <h3>Nông sản sạch và sức khỏe người tiêu dùng </h3>
+                                <p>Tìm hiểu về các tiêu chuẩn và lợi ích của nông sản sạch đối với sức khỏe của con
+                                    người trong đời sống xã hội hiện nay ...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Side News Items -->
+                <div class="side-news">
+                    <!-- News Item 1 -->
+                    <a href="blog.html" class="news-link">
+                        <div class="news-card small">
+                            <img src="assets/images/Blogs/Trồng cây tại nhà.jpg" alt="News 1">
+                            <div class="news-content">
+                                <div class="news-meta">
+                                    <i class="far fa-calendar"><span class="date"> 18/12/2024 </span></i>
+                                    <i class="far fa-comment"><span class="comments">6 Comments</span></i>
+                                </div>
+                                <h4>Phương pháp trồng rau sạch tại nhà</h4>
+                                <p>Hướng dẫn chi tiết cách trồng rau sạch trong không gian nhỏ và vừa, siêu năng suất và
+                                    đạt chất lượng cao ...</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- News Item 2 -->
+                    <a href="blog.html" class="news-link">
+                        <div class="news-card small">
+                            <img src="assets/images/Blogs/Cách bảo quản.jpg" alt="News 2">
+                            <div class="news-content">
+                                <div class="news-meta">
+                                    <i class="far fa-calendar"><span class="date"> 10/12/2024 </span></i>
+                                    <i class="far fa-comment"><span class="comments">4 Comments</span></i>
+                                </div>
+                                <h4>Bí quyết bảo quản rau củ tươi lâu</h4>
+                                <p>Các phương pháp chăm sóc và bảo quản tối ưu thực phẩm rau củ hiệu quả tại nhà...</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- News Item 3 -->
+                    <a href="blog.html" class="news-link">
+                        <div class="news-card small">
+                            <img src="assets/images/Blogs/Thực phẩm hc &mtrg.jpg" alt="News 3">
+                            <div class="news-content">
+                                <div class="news-meta">
+                                    <i class="far fa-calendar"><span class="date"> 6/12/2024 </span></i>
+                                    <i class="far fa-comment"><span class="comments">14 Comments</span></i>
+                                </div>
+                                <h4>Thực phẩm hữu cơ và môi trường</h4>
+                                <p>Tác động tích cực của nông nghiệp hữu cơ đối với môi trường...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </section>
+
+        <!--Đăng kí nhận tin mới-->
+        <hr>
+        <div class="newsletter-section">
+            <div class="text">
+                <h2>Đăng kí để nhận bài viết mới nhất</h2>
+                <p>*Nhập email để nhận những thông tin và ưu đãi mới nhất từ Garu.</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Email của bạn là..." required>
+                <button type="submit">Đăng kí</button>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container-1">
+                <div class="row">
+                    <!-- Cột 1: Logo và Phương thức thanh toán -->
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <img src="assets/images/Banner/logo.png" alt="Logo" width="150">
+                        </div>
+                        <p>Chúng tôi cung cấp các sản phẩm nông sản sạch chất lượng cao.</p>
+                        <h5>Phương thức thanh toán:</h5>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                    </div>
+
+                    <!-- Cột 2: Hỗ trợ -->
+                    <div class="col-md-3">
+                        <h5>Hỗ trợ</h5>
+                        <ul>
+                            <li><a href="">Chính sách bảo hành</a></li>
+                            <li><a href="">Chính sách vận chuyển</a></li>
+                            <li><a href="">Chính sách bảo mật</a></li>
+                            <li><a href="">Chính sách đổi trả</a></li>
+                            <li><a href="">Tùy chọn thanh toán</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Cột 3: Thông tin liên hệ -->
+                    <div class="col-md-3">
+                        <h5>Thông tin liên hệ</h5>
+                        <ul>
+                            <li><strong>Địa chỉ:</strong> 123 Đường ABC</li>
+                            <li><strong>Điện thoại:</strong> 0987654321</li>
+                            <li><strong>Email:</strong> info@garu.com</li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-google"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cột 4: Cam kết khách hàng -->
+                    <div class="col-md-3">
+                        <h5>Cam kết khách hàng</h5>
+                        <ul>
+                            <li>Giá ưu đãi nhất</li>
+                            <li>Sản phẩm chất lượng cao</li>
+                            <li>Truy xuất nguồn gốc rõ ràng</li>
+                            <li>Sản phẩm không đúng đền 100%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dòng dưới các cột -->
+                    <div class="text-center mt-4">
+                        <p>Website nông sản sạch Garu Việt Nam</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+<script>
+    // Hết ring sau khi tải trang
+    window.onload = function () {
+        document.getElementById("loading-screen").style.display = "none";
+    };
+
+</script>
+<!--Hiện thị chuột-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/60eee2d4f6.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const circle = document.getElementById('cursor-circle');
+    const dot = document.getElementById('cursor-dot');
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let circleX = 0;
+    let circleY = 0;
+
+    // Kiểm tra sự tồn tại của các phần tử trong DOM
+    if (circle && dot) {
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+
+            // Cập nhật vị trí của dot, điều chỉnh cho phù hợp với chuột
+            dot.style.left = `${mouseX}px`;
+            dot.style.top = `${mouseY}px`; // Điều chỉnh độ lệch của dot
+
+            // Cập nhật kích thư���c circle
+            circle.style.width = '35px';
+            circle.style.height = '35px';
+        });
+
+        function animate() {
+            // Cập nhật vị trí của circle với độ trễ
+            circleX += (mouseX - circleX) * 0.3;
+            circleY += (mouseY - circleY) * 0.3;
+
+            // Điều chỉnh vị trí của circle sao cho chính xác
+            circle.style.left = `${circleX}px`;
+            circle.style.top = `${circleY}px`;
+
+            // Yêu cầu một frame tiếp theo để tạo hiệu ứng mượt mà
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Khi chuột di chuyển ra ngoài, thu nhỏ circle và ẩn dot
+        document.addEventListener('mouseout', () => {
+            circle.style.width = '20px';
+            circle.style.height = '20px';
+
+            // Ẩn dot khi chuột ra ngoài
+            dot.style.left = `-9999px`;
+            dot.style.top = `-9999px`; // Di chuyển dot ra ngoài màn hình
+        });
+    }
+
+
+</script>
+
+<script>
+    // Ngày kếết thúc đếm ngược
+    const endDate = new Date("2024-12-28T23:59:59").getTime();
+
+    // Hàm cập nhật đếm ngược
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        // Tính toán ngày, giờ, phút và giây còn lại
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Hiển thị kết quả
+        document.getElementById("days").innerText = days.toString().padStart(2, '0');
+        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+        // Nếu hết thời gian, dừng đếm ngược
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "Đã hết thời gian!";
+        }
+    }
+
+    // Cập nhật đếm ngược mỗi giây
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Chạy ngay khi tải trang
+    updateCountdown();
+</script>
+<!--Sản phẩm nổi bật-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<script>
+    // Get cart elements
+    const cartIcon = document.getElementById('header-cart');
+    const cartPopup = document.getElementById('cartPopup');
+
+    // Toggle cart popup when clicking cart icon
+    if (cartIcon && cartPopup) {
+        cartIcon.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Toggle active class
+            cartPopup.classList.toggle('active');
+
+            // If popup is active, ensure it's visible
+            if (cartPopup.classList.contains('active')) {
+                cartPopup.style.display = 'block';
+                // Add animation class
+                cartPopup.style.opacity = '1';
+                cartPopup.style.transform = 'translateY(0)';
+            } else {
+                // Hide popup
+                cartPopup.style.opacity = '0';
+                cartPopup.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    cartPopup.style.display = 'none';
+                }, 300); // Match transition duration from CSS
+            }
+        });
+
+        // Close cart popup when clicking outside
+        document.addEventListener('click', function (e) {
+            if (cartPopup.classList.contains('active') &&
+                !cartPopup.contains(e.target) &&
+                !cartIcon.contains(e.target)) {
+                // Hide popup
+                cartPopup.classList.remove('active');
+                cartPopup.style.opacity = '0';
+                cartPopup.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    cartPopup.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+
+    // Prevent popup from closing when clicking inside it
+    cartPopup.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+</script>
+
+
+</html>

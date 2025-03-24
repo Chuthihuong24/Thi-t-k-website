@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="vi"
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Đăng Ký- Garu </title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/signup.css">
+    <link rel="icon" href="assets/images/Banner/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="assets/script.js"></script>
+</head>
+
+<body>
+<!-- Preloader-->
+    <div id="loading-screen">
+        <div class="ring"></div>
+    </div>
+<!--mouse effect-->
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    
+<!--Header with 3 div: logo, menu, others -->
+    <header> 
+        <div class="logo">
+            <a href="" class="logo"></a>
+            <img src="assets/images/Banner/logo.png" title="Nông sản sạch Garu" width="160px">
+        </div>
+
+        <nav class="menu">
+            <li><a href="home.html"> TRANG CHỦ</a></li>
+            <li><a href="landingpage.html"> GIỚI THIỆU</a></li>
+            <li><a href="products.html"> SẢN PHẨM</a>
+                <ul class="sub-menu">
+                    <li><a href=""> Trái cây</a></li>
+                    <li><a href=""> Rau củ</a></li>
+                    <li><a href=""> Đồ uống </a></li>
+                    <li><a href=""> Các loại Đậu</a></li>
+                    <li><a href=""> Bún, gạo</a></li>
+                    <li><a href=""> Thực phẩm hữu cơ</a></li>
+                </ul>
+            </li>
+            <li><a href="seed.html"> HẠT GIỐNG</a>
+                <ul class="sub-menu">
+                    <li><a href="">Hạt giống rau</a></li>
+                    <li><a href="">Hạt giống củ quả</a></li>
+                    <li><a href="">Hạt giống hoa cảnh</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"> KIẾN THỨC</a>
+                <ul class="sub-menu">
+                    <li><a href="">Trồng trọt chăm bón</a></li>
+                    <li><a href="">Cách nhân giống</a></li>
+                    <li><a href="">Hướng dẫn trồng cây</a></li>
+                    <li><a href="">Phân bón</a></li>
+                    <li><a href="">Sức khỏe & an toàn</a></li>
+                    <li><a href="">Món ngon mỗi ngày</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html"> LIÊN HỆ</a></li>
+        </nav>
+
+        <div class="others">
+            <button><a href="login.html"> Đăng nhập </a></button>
+            <button><a href="signup.html"> Đăng ký </a></button>
+            <div class="cart-container">
+                <div class="cart-icon" id="header-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <!--Popup giỏ hàng để lớp này khi hiện ra đè lên màn hình chính-->
+                <div class="cart-popup" id="cartPopup">
+                    <h3>GIỎ HÀNG</h3>
+                    <div class="cart-content">
+                        <i class="fas fa-shopping-cart cart-empty-icon"></i>
+                        <p>Hiện chưa có sản phẩm</p>
+                    </div>
+                    <div class="cart-footer">
+                    <p><strong>Tổng tiền:</strong> <span>0₫</span></p>
+                    <button class="btn-view-cart"><a href="">Xem giỏ hàng</a></button>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </header>
+<!--Thanh dưới header: Time, Search, Hotline-->
+<div class="info-bar">
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button type="button" class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="hotline">
+        <p>Hotline: <strong>1800-1234</strong></p>
+    </div>
+</div>
+
+<!--Nội dung chính-->
+<body>
+    <section class="signup-section">
+        <div class="container">
+            <div class="signup-wrapper">
+                <div class="signup-content">
+                    <h2>Đăng Ký Tài Khoản</h2>
+                    <p>Tạo tài khoản để nhận nhiều ưu đãi hơn</p>
+                    
+                    <form class="signup-form" id="signupForm">
+                        <!-- Thông tin cá nhân -->
+                        <div class="form-group">
+                            <h3>Thông tin cá nhân</h3>
+                            <input type="text" id="fullName" name="fullName" placeholder="Họ và tên *" required>
+                            <input type="email" id="email" name="email" placeholder="Email *" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Số điện thoại *" required>
+                            <div class="gender-select">
+                                <div class="gender-select">
+                                    <label>Giới tính:</label>
+                                    <label class="radio-container">Nam
+                                        <input type="radio" name="gender" value="male">
+                                        <span class="radio-checkmark"></span>
+                                    </label>
+                                    
+                                    <label class="radio-container"> Nữ
+                                        <input type="radio" name="gender" value="female">
+                                        <span class="radio-checkmark"></span>
+                                    </label>
+                                    
+                                    <label class="radio-container">Khác
+                                        <input type="radio" name="gender" value="other">
+                                        <span class="radio-checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <label>Ngày sinh:</label>
+                            <input type="date" id="birthday" name="birthday" placeholder="Ngày sinh">
+                        </div>
+    
+                        <!-- Địa chỉ -->
+                        <div class="form-group">
+                            <h3>Địa chỉ giao hàng</h3>
+                            <input type="text" id="address" name="address" placeholder="Địa chỉ chi tiết *" required>
+                            <select id="city" name="city" required>
+                                <option value="">Chọn Tỉnh/Thành phố *</option>
+                            </select>
+                            <select id="district" name="district" required>
+                                <option value="">Chọn Quận/Huyện *</option>
+                            </select>
+                            <select id="ward" name="ward" required>
+                                <option value="">Chọn Phường/Xã *</option>
+                            </select>
+                        </div>
+    
+                        <!-- Tài khoản -->
+                        <div class="form-group">
+                            <h3>Thông tin tài khoản</h3>
+                            <input type="text" id="username" name="username" placeholder="Tên đăng nhập *" required>
+                            <input type="password" id="password" name="password" placeholder="Mật khẩu *" required>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu *" required>
+                        </div>
+    
+                        <!-- Tùy chọn -->
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                <span class="checkmark"></span>
+                                Đăng ký nhận tin tức và ưu đãi qua email
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="terms" id="terms" required>
+                                <span class="checkmark"></span>
+                                Tôi đồng ý với các điều khoản và điều kiện *
+                            </label>
+                        </div>
+    
+                        <button type="submit" class="signup-button">Đăng Ký</button>
+                    </form>
+    
+                    <div class="login-link">
+                        Đã có tài khoản? <a href="login.html" style="color: #2dc60c">Đăng nhập ngay</a>
+                    </div>
+                </div>
+    
+                <div class="signup-benefits">
+                    <h3>Quyền lợi thành viên</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Tích điểm đổi quà với mỗi đơn hàng</li>
+                        <li><i class="fas fa-check"></i> Ưu đãi độc quyền cho thành viên</li>
+                        <li><i class="fas fa-check"></i> Nhận thông tin khuyến mãi sớm nhất</li>
+                        <li><i class="fas fa-check"></i> Quản lý đơn hàng dễ dàng</li>
+                        <li><i class="fas fa-check"></i> Lưu địa chỉ giao hàng yêu thích</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+<footer>
+    <div class="container-1">
+        <div class="row">
+        <!-- Cột 1: Logo và Phương thức thanh toán -->
+            <div class="col-md-3">
+                <div class="logo">
+                    <img src="assets/images/Banner/logo.png" alt="Logo" width="150">
+                </div>
+                <p>Chúng tôi cung cấp các sản phẩm nông sản sạch chất lượng cao.</p>
+                <h5>Phương thức thanh toán:</h5>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-wallet"></i>
+                </div>
+            </div>
+          
+        <!-- Cột 2: Hỗ trợ -->
+            <div class="col-md-3">
+                <h5>Hỗ trợ</h5>
+                <ul>
+                    <li><a href="">Chính sách bảo hành</a></li>
+                    <li><a href="">Chính sách vận chuyển</a></li>
+                    <li><a href="">Chính sách bảo mật</a></li>
+                    <li><a href="">Chính sách đổi trả</a></li>
+                    <li><a href="">Tùy chọn thanh toán</a></li>
+                </ul>
+            </div>
+          
+        <!-- Cột 3: Thông tin liên hệ -->
+            <div class="col-md-3">
+                <h5>Thông tin liên hệ</h5>
+                <ul>
+                    <li><strong>Địa chỉ:</strong> 123 Đường ABC</li>
+                    <li><strong>Điện thoại:</strong> 0987654321</li>
+                    <li><strong>Email:</strong> info@garu.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+          
+            <!-- Cột 4: Cam kết khách hàng -->
+            <div class="col-md-3">
+                <h5>Cam kết khách hàng</h5>
+                <ul>
+                    <li>Giá ưu đãi nhất</li>
+                    <li>Sản phẩm chất lượng cao</li>
+                    <li>Truy xuất nguồn gốc rõ ràng</li>
+                    <li>Sản phẩm không đúng đền 100%</li>
+                </ul>
+            </div>
+          
+            <!-- Dòng dưới các cột -->
+            <div class="text-center mt-4">
+                <p>Website nông sản sạch Garu Việt Nam</p>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+</body>
+
+<script>
+    // Hết ring sau khi tải trang
+    window.onload = function () {
+        document.getElementById("loading-screen").style.display = "none";
+    };
+</script>
+
+<!--Hiện thị chuột-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/60eee2d4f6.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   const circle = document.getElementById('cursor-circle');
+const dot = document.getElementById('cursor-dot');
+
+let mouseX = 0;
+let mouseY = 0;
+let circleX = 0;
+let circleY = 0;
+
+// Kiểm tra sự tồn tại của các phần tử trong DOM
+if (circle && dot) {
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+
+        // Cập nhật vị trí của dot, điều chỉnh cho phù hợp với chuột
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`; // Điều chỉnh độ lệch của dot
+
+        // Cập nhật kích thước circle
+        circle.style.width = '35px';
+        circle.style.height = '35px';
+    });
+
+    function animate() {
+        // Cập nhật vị trí của circle với độ trễ
+        circleX += (mouseX - circleX) * 0.3;
+        circleY += (mouseY - circleY) * 0.3;
+
+        // Điều chỉnh vị trí của circle sao cho chính xác
+        circle.style.left = `${circleX}px`;
+        circle.style.top = `${circleY}px`;
+
+        // Yêu cầu một frame tiếp theo để tạo hiệu ứng mượt mà
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Khi chuột di chuyển ra ngoài, thu nhỏ circle và ẩn dot
+    document.addEventListener('mouseout', () => {
+        circle.style.width = '20px';
+        circle.style.height = '20px';
+        
+        // Ẩn dot khi chuột ra ngoài
+        dot.style.left = `-9999px`;
+        dot.style.top = `-9999px`; // Di chuyển dot ra ngoài màn hình
+    });
+}
+</script>
+
+<script>
+    // Get cart elements
+const cartIcon = document.getElementById('header-cart');
+const cartPopup = document.getElementById('cartPopup');
+
+// Toggle cart popup when clicking cart icon
+if (cartIcon && cartPopup) {
+    cartIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Toggle active class
+        cartPopup.classList.toggle('active');
+        
+        // If popup is active, ensure it's visible
+        if (cartPopup.classList.contains('active')) {
+            cartPopup.style.display = 'block';
+            // Add animation class
+            cartPopup.style.opacity = '1';
+            cartPopup.style.transform = 'translateY(0)';
+        } else {
+            // Hide popup
+            cartPopup.style.opacity = '0';
+            cartPopup.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                cartPopup.style.display = 'none';
+            }, 300); // Match transition duration from CSS
+        }
+    });
+
+    // Close cart popup when clicking outside
+    document.addEventListener('click', function(e) {
+        if (cartPopup.classList.contains('active') && 
+            !cartPopup.contains(e.target) && 
+            !cartIcon.contains(e.target)) {
+            // Hide popup
+            cartPopup.classList.remove('active');
+            cartPopup.style.opacity = '0';
+            cartPopup.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                cartPopup.style.display = 'none';
+            }, 300);
+        }
+    });
+}
+
+// Prevent popup from closing when clicking inside it
+cartPopup.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+</script>

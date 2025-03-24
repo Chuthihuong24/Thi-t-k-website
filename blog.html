@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="vi" <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Trang Kiến Thức- Garu </title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/blog.css">
+<link rel="icon" href="assets/images/Banner/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="assets/script.js"></script>
+<script src="assets/blog.js"></script>
+</head>
+
+<body>
+    <!-- Preloader-->
+    <div id="loading-screen">
+        <div class="ring"></div>
+    </div>
+    <!--mouse effect-->
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!--Header with 3 div: logo, menu, others -->
+    <header>
+        <div class="logo">
+            <a href="" class="logo"></a>
+            <img src="assets/images/Banner/logo.png" title="Nông sản sạch Garu" width="160px">
+        </div>
+
+        <nav class="menu">
+            <li><a href="home.html"> TRANG CHỦ</a></li>
+            <li><a href="landingpage.html"> GIỚI THIỆU</a></li>
+            <li><a href="products.html"> SẢN PHẨM</a>
+                <ul class="sub-menu">
+                    <li><a href="products.html"><strong>Tất cả sản phẩm</strong></a></li>
+                    <li><a href=""> Trái cây</a></li>
+                    <li><a href=""> Rau củ</a></li>
+                    <li><a href=""> Đồ uống </a></li>
+                    <li><a href=""> Các loại Đậu</a></li>
+                    <li><a href=""> Bún, gạo</a></li>
+                    <li><a href=""> Thực phẩm hữu cơ</a></li>
+                </ul>
+            </li>
+            <li><a href="products.html"> HẠT GIỐNG</a>
+                <ul class="sub-menu">
+                    <li><a href="products.html"><strong>Tất cả sản phẩm</strong></a></li>
+                    <li><a href="">Hạt giống rau</a></li>
+                    <li><a href="">Hạt giống củ quả</a></li>
+                    <li><a href="">Hạt giống hoa cảnh</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"> KIẾN THỨC</a>
+                <ul class="sub-menu">
+                    <li><a href="blog.html"><strong>Tất cả tin</strong></a></li>
+                    <li><a href="">Trồng trọt chăm bón</a></li>
+                    <li><a href="">Cách nhân giống</a></li>
+                    <li><a href="">Hướng dẫn trồng cây</a></li>
+                    <li><a href="">Phân bón</a></li>
+                    <li><a href="">Sức khỏe & an toàn</a></li>
+                    <li><a href="">Món ngon mỗi ngày</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html"> LIÊN HỆ</a></li>
+        </nav>
+
+        <div class="others">
+            <button><a href="login.html"> Đăng nhập </a></button>
+            <button><a href="signup.html"> Đăng ký </a></button>
+            <div class="cart-container">
+                <div class="cart-icon" id="header-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <!--Popup giỏ hàng để lớp này khi hiện ra đè lên màn hình chính-->
+                <div class="cart-popup" id="cartPopup">
+                    <h3>GIỎ HÀNG</h3>
+                    <div class="cart-content">
+                        <i class="fas fa-shopping-cart cart-empty-icon"></i>
+                        <p>Hiện chưa có sản phẩm</p>
+                    </div>
+                    <div class="cart-footer">
+                        <p><strong>Tổng tiền:</strong> <span>0₫</span></p>
+                        <button class="btn-view-cart"><a href="">Xem giỏ hàng</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Thanh dưới header: Time, Search, Hotline-->
+    <div class="info-bar">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <button type="button" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        <div class="hotline">
+            <p>Hotline: <strong>1800-1234</strong></p>
+        </div>
+    </div>
+    <!-- Phần giới thiệu -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-header">
+                <h2>Vườn Xanh <span class="highlight">Trong Tầm Tay</span></h2>
+            </div>
+            <div class="leaf-2"></div>
+                <img src="/assets/images/banner/leaf.png" alt="Leaf decoration" width="300px" class="leaf-3d">
+            </div>
+            <div class="intro-content">
+                <p>
+                    Khám phá thế giới trồng trọt với những kiến thức chuyên sâu về hạt giống, kỹ thuật gieo trồng
+                    và chăm sóc cây. Chúng tôi mang đến những bài viết hữu ích, chia sẻ kinh nghiệm thực tế
+                    giúp bạn tạo nên khu vườn xanh tốt trong không gian sống của mình.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần bài viết chính -->
+    <section class="blog-section py-5">
+        <div class="container">
+            <h2>Kiến Thức & Chia Sẻ</h2>
+                
+            <div class="row g-4">
+                <!-- Kỹ thuật gieo hạt -->
+                <div class="col-md-4">
+                    <div class="blog-item">
+                        <img src="assets/images/blog/nông sản.jpg" alt="Nông sản sạch">
+                        <div class="blog-content">
+                            <span class="category">Nông sản sạch</span>
+                            <h3>Tìm hiểu về nông sản sạch</h3>
+                            <ul class="blog-highlights">
+                                <li>Tiêu chuẩn VietGAP trong sản xuất nông nghiệp</li>
+                                <li>Quy trình sản xuất nông sản hữu cơ</li>
+                                <li>Lợi ích của nông sản sạch với sức khỏe</li>
+                            </ul>
+                            <a href="#" class="read-more" data-article-id="1">Xem thêm <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="articleModal" class="article-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="article-content">
+                            <div class="article-header">
+                                <span class="article-category"></span>
+                                <h2></h2>
+                                <div class="article-meta">
+                                    <span class="date"></span>
+                                    <span class="author"></span>
+                                </div>
+                            </div>
+                            <div class="article-body"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chăm sóc vườn rau -->
+                <div class="col-md-4">
+                    <div class="blog-item">
+                        <img src="assets/images/blog/môi trường.jpg" alt="Bảo vệ môi trường">
+                        <div class="blog-content">
+                            <span class="category">Môi trường</span>
+                            <h3>Nông nghiệp xanh & Môi trường</h3>
+                            <ul class="blog-highlights">
+                                <li>Phương pháp canh tác bền vững</li>
+                                <li>Giảm thiểu rác thải nhựa trong nông nghiệp</li>
+                                <li>Tái chế phụ phẩm nông nghiệp</li>
+                            </ul>
+                            <a href="#" class="read-more" data-article-id="2">Xem thêm <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dinh dưỡng -->
+                <div class="col-md-4">
+                    <div class="blog-item">
+                        <img src="assets/images/blog/dinh dưỡng.webp" alt="Dinh dưỡng">
+                        <div class="blog-content">
+                            <span class="category">Dinh dưỡng</span>
+                            <h3>Dinh dưỡng từ thực phẩm sạch</h3>
+                            <ul class="blog-highlights">
+                                <li>Giá trị dinh dưỡng của rau củ theo mùa</li>
+                                <li>Chế độ ăn cân bằng dinh dưỡng</li>
+                                <li>Thực phẩm tăng cường miễn dịch</li>
+                            </ul>
+                            <a href="#" class="read-more" data-article-id="3">Xem thêm <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ẩm thực xanh -->
+                <div class="col-md-4">
+                    <div class="blog-item">
+                        <img src="assets/images/blog/ẩm thực.jpg" alt="Ẩm thực xanh">
+                        <div class="blog-content">
+                            <span class="category">Ẩm thực</span>
+                            <h3>Ẩm thực xanh - Sống khỏe</h3>
+                            <ul class="blog-highlights">
+                                <li>Chế biến món chay từ rau củ</li>
+                                <li>Thực đơn healthy giảm cân</li>
+                                <li>Món ăn tốt cho tim mạch</li>
+                            </ul>
+                            <a href="#" class="read-more" data-article-id="4">Xem thêm <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sống xanh -->
+                <div class="col-md-4">
+                    <div class="blog-item">
+                        <img src="assets/images/blog/sống xanh.jpg" alt="Sống xanh">
+                        <div class="blog-content">
+                            <span class="category">Lifestyle</span>
+                            <h3>Lối sống xanh & Bền vững</h3>
+                            <ul class="blog-highlights">
+                                <li>Mẹo giảm thiểu rác thải nhà bếp</li>
+                                <li>Tự làm phân bón hữu cơ tại nhà</li>
+                                <li>Cách tận dụng thực phẩm dư thừa</li>
+                            </ul>
+                            <a href="#" class="read-more" data-article-id="5">Xem thêm <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cộng đồng -->
+                <div class="col-md-4">
+                    <div class="blog-item">
+                        <img src="assets/images/blog/cộng đồng.jpg" alt="Cộng đồng">
+                        <div class="blog-content">
+                            <span class="category">Cộng đồng</span>
+                            <h3>Cộng đồng vì môi trường xanh</h3>
+                            <ul class="blog-highlights">
+                                <li>Các dự án nông nghiệp cộng đồng</li>
+                                <li>Chia sẻ kinh nghiệm trồng rau sạch</li>
+                                <li>Kết nối người trồng - người dùng</li>
+                            </ul>
+                            <a href="#" class="read-more" data-article-id="6">Xem thêm <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-news">
+        <div class="container">
+            <div class="blog-header">
+                <h2>Tin Tức & Kinh Nghiệm</h2>
+                <p class="subtitle">Cập nhật thông tin mới nhất về trồng trọt</p>
+            </div>
+
+            <div class="blog-posts">
+                <!-- Bài viết 1 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <img src="assets/images/blog/hạt giống.jpg" alt="Chọn hạt giống">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <img src="assets/images/blog/avata1.webp" alt="Chuyên gia">
+                                Th.S Nguyễn Văn A
+                            </span>
+                            <span class="comments">15 <i class="far fa-comment"></i></span>
+                            <span class="likes">45 <i class="far fa-heart"></i></span>
+                        </div>
+                        <h3>Cách chọn hạt giống chất lượng</h3>
+                        <p>Hướng dẫn chi tiết cách nhận biết hạt giống tốt, các tiêu chí đánh giá và bảo quản hạt
+                            giống...</p>
+                        <a href="blog-detail.html" class="read-more">Xem thêm</a>
+                    </div>
+                </div>
+
+                <!-- Bài viết 2 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <img src="assets/images/blog/cây bệnh.jpg" alt="Bệnh cây">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <img src="assets/images/blog/KT 3.2.png" alt="Chuyên gia">
+                                TS. Trần Thị B
+                            </span>
+                            <span class="comments">8 <i class="far fa-comment"></i></span>
+                            <span class="likes">32 <i class="far fa-heart"></i></span>
+                        </div>
+                        <h3>Nhận biết và phòng trị bệnh cho cây</h3>
+                        <p>Các bệnh thường gặp ở cây trồng và giải pháp phòng trị an toàn, hiệu quả...</p>
+                        <a href="blog-detail.html" class="read-more">Xem thêm</a>
+                    </div>
+                </div>
+
+                <!-- Bài viết 3 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <img src="assets/images/blog/phân bón.jpg" alt="Phân bón">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <img src="assets/images/blog/KT 3.3.png" alt="Chuyên gia">
+                                KS. Lê Văn C
+                            </span>
+                            <span class="comments">12 <i class="far fa-comment"></i></span>
+                            <span class="likes">28 <i class="far fa-heart"></i></span>
+                        </div>
+                        <h3>Hướng dẫn sử dụng phân bón hữu cơ</h3>
+                        <p>Cách tự làm và sử dụng phân bón hữu cơ an toàn, hiệu quả cho cây trồng...</p>
+                        <a href="https://khangnong.vn/bai-viet/huong-dan-su-dung-phan-bon-huu-co-cho-cay-trong-12.html"
+                            class="read-more" target="_blank">Xem thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2 class="faq-title">Câu hỏi thường gặp</h2>
+        <div class="faq-container">
+            <!-- Câu hỏi 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    Làm sao để trồng rau sạch tại nhà?
+                    <span class="arrow">&#9654;</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Bạn có thể trồng rau sạch tại nhà bằng cách sử dụng đất hữu cơ, trồng trong các thùng xốp hoặc
+                        giỏ treo. Hãy chú ý tưới nước đều đặn và đảm bảo rằng cây nhận đủ ánh sáng mặt trời.</p>
+                </div>
+            </div>
+
+            <!-- Câu hỏi 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    Nông sản sạch có lợi cho sức khỏe như thế nào?
+                    <span class="arrow">&#9654;</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nông sản sạch giúp bảo vệ sức khỏe bằng cách hạn chế việc sử dụng hóa chất độc hại trong quá
+                        trình trồng trọt. Nó cung cấp thực phẩm tươi ngon, an toàn hơn cho người tiêu dùng.</p>
+                </div>
+            </div>
+
+            <!-- Câu hỏi 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    Cách bảo quản rau củ tươi lâu?
+                    <span class="arrow">&#9654;</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Các phương pháp bảo quản rau củ hiệu quả bao gồm giữ chúng trong ngăn mát tủ lạnh, sử dụng các
+                        loại túi nhựa chuyên dụng, hoặc đóng gói hút chân không để kéo dài thời gian bảo quản.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer-->
+    <footer>
+        <div class="container-1">
+            <div class="row">
+                <!-- Cột 1: Logo và Phương thức thanh toán -->
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img src="assets/images/Banner/logo.png" alt="Logo" width="150">
+                    </div>
+                    <p>Chúng tôi cung cấp các sản phẩm nông sản sạch chất lượng cao.</p>
+                    <h5>Phương thức thanh toán:</h5>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Hỗ trợ -->
+                <div class="col-md-3">
+                    <h5>Hỗ trợ</h5>
+                    <ul>
+                        <li><a href="">Chính sách bảo hành</a></li>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                        <li><a href="">Tùy chọn thanh toán</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Thông tin liên hệ -->
+                <div class="col-md-3">
+                    <h5>Thông tin liên hệ</h5>
+                    <ul>
+                        <li><strong>Địa chỉ:</strong> 123 Đường ABC</li>
+                        <li><strong>Điện thoại:</strong> 0987654321</li>
+                        <li><strong>Email:</strong> info@garu.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cột 4: Cam kết khách hàng -->
+                <div class="col-md-3">
+                    <h5>Cam kết khách hàng</h5>
+                    <ul>
+                        <li>Giá ưu đãi nhất</li>
+                        <li>Sản phẩm chất lượng cao</li>
+                        <li>Truy xuất nguồn gốc rõ ràng</li>
+                        <li>Sản phẩm không đúng đền 100%</li>
+                    </ul>
+                </div>
+
+                <!-- Dòng dưới các cột -->
+                <div class="text-center mt-4">
+                    <p>Website nông sản sạch Garu Việt Nam</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+
+    // Lấy tất cả các nút câu hỏi
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+            // Toggle class 'active' cho câu hỏi hiện tại
+            const parent = question.parentElement;
+            parent.classList.toggle('active');
+
+            // Thay đổi nội dung mũi tên
+            const arrow = question.querySelector('.arrow');
+            if (parent.classList.contains('active')) {
+                arrow.innerHTML = '&#9660;'; // Mũi tên xuống
+            } else {
+                arrow.innerHTML = '&#9654;'; // Mũi tên sang phải
+            }
+
+            // Hiển thị hoặc ẩn câu trả lời
+            const answer = parent.querySelector('.faq-answer');
+            if (parent.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0';
+            }
+        });
+    });
+</script>
+<script>
+    // Hết ring sau khi tải trang
+    window.onload = function () {
+        document.getElementById("loading-screen").style.display = "none";
+    };
+
+</script>
+<!--Hiện thị chuột-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/60eee2d4f6.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const circle = document.getElementById('cursor-circle');
+    const dot = document.getElementById('cursor-dot');
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let circleX = 0;
+    let circleY = 0;
+
+    // Kiểm tra sự tồn tại của các phần tử trong DOM
+    if (circle && dot) {
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+
+            // Cập nhật vị trí của dot, điều chỉnh cho phù hợp với chuột
+            dot.style.left = `${mouseX}px`;
+            dot.style.top = `${mouseY}px`; // Điều chỉnh độ lệch của dot
+
+            // Cập nhật kích thước circle
+            circle.style.width = '35px';
+            circle.style.height = '35px';
+        });
+
+        function animate() {
+            // Cập nhật vị trí của circle với độ trễ
+            circleX += (mouseX - circleX) * 0.3;
+            circleY += (mouseY - circleY) * 0.3;
+
+            // Điều chỉnh vị trí của circle sao cho chính xác
+            circle.style.left = `${circleX}px`;
+            circle.style.top = `${circleY}px`;
+
+            // Yêu cầu một frame tiếp theo để tạo hiệu ứng mượt mà
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Khi chuột di chuyển ra ngoài, thu nhỏ circle và ẩn dot
+        document.addEventListener('mouseout', () => {
+            circle.style.width = '20px';
+            circle.style.height = '20px';
+
+            // Ẩn dot khi chuột ra ngoài
+            dot.style.left = `-9999px`;
+            dot.style.top = `-9999px`; // Di chuyển dot ra ngoài màn hình
+        });
+    }
+
+
+</script>
+
+<script>
+    // Ngày kếết thúc đếm ngược
+    const endDate = new Date("2024-12-28T23:59:59").getTime();
+
+    // Hàm cập nhật đếm ngược
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        // Tính toán ngày, giờ, phút và giây còn lại
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Hiển thị kết quả
+        document.getElementById("days").innerText = days.toString().padStart(2, '0');
+        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+        // Nếu hết thời gian, dừng đếm ngược
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "Đã hết thời gian!";
+        }
+    }
+
+    // Cập nhật đếm ngược mỗi gi��y
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Chạy ngay khi tải trang
+    updateCountdown();
+</script>
+<!--Sản phẩm nổi bật-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<script>
+    // Get cart elements
+    const cartIcon = document.getElementById('header-cart');
+    const cartPopup = document.getElementById('cartPopup');
+
+    // Toggle cart popup when clicking cart icon
+    if (cartIcon && cartPopup) {
+        cartIcon.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Toggle active class
+            cartPopup.classList.toggle('active');
+
+            // If popup is active, ensure it's visible
+            if (cartPopup.classList.contains('active')) {
+                cartPopup.style.display = 'block';
+                // Add animation class
+                cartPopup.style.opacity = '1';
+                cartPopup.style.transform = 'translateY(0)';
+            } else {
+                // Hide popup
+                cartPopup.style.opacity = '0';
+                cartPopup.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    cartPopup.style.display = 'none';
+                }, 300); // Match transition duration from CSS
+            }
+        });
+
+        // Close cart popup when clicking outside
+        document.addEventListener('click', function (e) {
+            if (cartPopup.classList.contains('active') &&
+                !cartPopup.contains(e.target) &&
+                !cartIcon.contains(e.target)) {
+                // Hide popup
+                cartPopup.classList.remove('active');
+                cartPopup.style.opacity = '0';
+                cartPopup.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    cartPopup.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+
+    // Prevent popup from closing when clicking inside it
+    cartPopup.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+</script>
+
+</html>
